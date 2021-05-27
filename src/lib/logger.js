@@ -49,7 +49,7 @@ export function proxyLogger(logger = _logger, basePath) {
     for (const level in logger) {
       clientLogger[level] = (code, ...message) => {
         _logger[level](code, ...message) // Log on client as usual
-
+        /*
         const url = `${basePath}/_log`
         const body = new URLSearchParams({
           level,
@@ -72,6 +72,7 @@ export function proxyLogger(logger = _logger, basePath) {
           headers: { "Content-Type": "application/json" },
           body,
         })
+        */
       }
     }
     return clientLogger
