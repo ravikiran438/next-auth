@@ -39,6 +39,7 @@
     "watch:css": "postcss --config config/postcss.config.js --watch src/**/*.css --base src --dir dist",
     "test": "echo \"Write some tests...\"; npm run test:types",
     "test:types": "dtslint types --onlyTestTsNext",
+    "prepack": "npm run build",
     "prepublishOnly": "npm run build",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
